@@ -40,7 +40,7 @@ int main() {
     NtClose_t NtClose = (NtClose_t)GetProcAddress(ntdll, "NtClose");
 
     UNICODE_STRING path;
-    RtlInitUnicodeString(&path, L"\\DosDevices\\C:\\Temp"); 
+    RtlInitUnicodeString(&path, L"\\DosDevices\\C:\\Temp"); // Dir to monitor
 
     OBJECT_ATTRIBUTES oa;
     InitializeObjectAttributes(&oa, &path, OBJ_CASE_INSENSITIVE, NULL, NULL);
